@@ -61,7 +61,7 @@ public class Lesson1 {
         // Cooler way.
         list.stream()
                 .map(s -> Character.toString(s.charAt(0)))
-                .collect(Collectors.joining());
+                .collect(joining());
 
     }
 
