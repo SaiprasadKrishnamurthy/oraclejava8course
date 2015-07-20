@@ -52,9 +52,17 @@ public class Lesson1 {
                 "alpha", "bravo", "charlie", "delta", "echo", "foxtrot");
 
     /* YOUR CODE HERE */
+
+        // Naive way
+        StringBuilder builder = new StringBuilder();
+        list.forEach(s -> builder.append(Character.toString(s.charAt(0))));
+        String result = builder.toString();
+
+        // Cooler way.
         list.stream()
                 .map(s -> Character.toString(s.charAt(0)))
                 .collect(Collectors.joining());
+
     }
 
     /**
