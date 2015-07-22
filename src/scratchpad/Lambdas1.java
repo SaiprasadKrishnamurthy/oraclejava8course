@@ -1,8 +1,13 @@
 package scratchpad;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.StringReader;
+import java.nio.file.Files;
 import java.util.*;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.logging.FileHandler;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
@@ -71,6 +76,18 @@ public class Lambdas1 {
 
         l.replaceAll(String::toUpperCase);
         System.out.println(l);
+
+
+        int n = 24;
+
+
+        StringReader f = null;
+        BufferedReader b = null;
+        Files ll = null;
+        FileHandler fh = null;
+
+
+
 
 
     }
