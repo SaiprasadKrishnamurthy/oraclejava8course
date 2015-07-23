@@ -49,7 +49,7 @@ out/
 # .idea/libraries
 
 # Mongo Explorer plugin:
-# .idea/mongoSettings.xml
+# .idea/*
 
 ## File-based project format:
 *.ipr
@@ -58,7 +58,7 @@ out/
 ## Plugin-specific files:
 
 # IntelliJ
-/out/
+out/*
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
