@@ -85,7 +85,7 @@ public class Lesson2 {
     private void exercise3() {
         List<String> list = Arrays.asList(
                 "The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog");
-        System.out.println(IntStream.of(1, 2, 3).mapToObj(list::get).collect(joining("-")));
+        System.out.println(IntStream.rangeClosed(1, 3).mapToObj(list::get).collect(joining("-")));
     }
 
     /**
