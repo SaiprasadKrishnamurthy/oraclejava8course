@@ -85,7 +85,14 @@ public class Lesson2 {
     private void exercise3() {
         List<String> list = Arrays.asList(
                 "The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog");
-        System.out.println(IntStream.rangeClosed(1, 3).mapToObj(list::get).collect(joining("-")));
+        System.out.println(IntStream.rangeClosed(1, 3)
+                .mapToObj(list::get)
+                .collect(joining("-")));
+
+        list.stream()
+                .skip(1)
+                .limit(3)
+                .collect(joining("-"));
     }
 
     /**
@@ -108,7 +115,7 @@ public class Lesson2 {
         try (BufferedReader reader = Files.newBufferedReader(
                 Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
             reader.lines()
-                    .flatMap(line -> Arrays.stream(line.split(WORD_REGEXP)))
+                    .flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
                     .distinct()
                     .forEach(System.out::println);
         }
@@ -130,6 +137,7 @@ public class Lesson2 {
                     .forEach(System.out::println);
         }
     }
+
 
     /**
      * Modify exercise6 so that the words are sorted by length
